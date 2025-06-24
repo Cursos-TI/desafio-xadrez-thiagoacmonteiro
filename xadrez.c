@@ -31,11 +31,11 @@ void move_rainha(int num_movimentos_rainha) {
 }
 
 int main() {
-  int num_movimentos_torre, num_movimentos_bispo, num_movimentos_rainha;
+  int num_movimentos_torre = 5, num_movimentos_bispo = 5, num_movimentos_rainha = 8;
 
-  move_torre(5);
-  move_bispo(5);
-  move_rainha(8);
+  move_torre(num_movimentos_torre);
+  move_bispo(num_movimentos_bispo);
+  move_rainha(num_movimentos_rainha);
 
   return 0;
 }
