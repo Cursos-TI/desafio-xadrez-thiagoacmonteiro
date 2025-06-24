@@ -16,26 +16,36 @@ void move_bispo(int num_movimentos_bispo) {
   do {
     printf("Cima, Direita\n");
     posicao_inicial++;
-  } while (posicao_inicial < num_movimentos_bispo);  
+  } while (posicao_inicial < num_movimentos_bispo);
 }
 
 void move_rainha(int num_movimentos_rainha) {
-  int posicao_inicial = 0;
-
   printf("\nMovendo a rainha %d vezes\n\n", num_movimentos_rainha);
 
-  while (posicao_inicial < num_movimentos_rainha) {
+  while (num_movimentos_rainha--) {
     printf("Esquerda\n");
-    posicao_inicial++;
+  }
+}
+
+void move_cavalo(int num_movimentos_cavalo) {
+  printf("\nMovendo o cavalo %d vezes\n\n", num_movimentos_cavalo);
+
+  while (num_movimentos_cavalo--) {
+    for (int i = 0; i < 2; i++) {
+      printf("Baixo\n");
+    }
+
+    printf("Esquerda\n");
   }
 }
 
 int main() {
-  int num_movimentos_torre = 5, num_movimentos_bispo = 5, num_movimentos_rainha = 8;
+  int num_movimentos_torre = 5, num_movimentos_bispo = 5, num_movimentos_rainha = 8, num_movimentos_cavalo = 2;
 
   move_torre(num_movimentos_torre);
   move_bispo(num_movimentos_bispo);
   move_rainha(num_movimentos_rainha);
+  move_cavalo(num_movimentos_cavalo);
 
   return 0;
 }
